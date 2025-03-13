@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone repository') 
+        stage('Clone repository') {
             steps {
                 checkout([$class: 'GitSCM', 
                     branches: [[name: '*/main']], 
@@ -19,7 +19,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh './main/output'
+                sh 
             }
         }
 
